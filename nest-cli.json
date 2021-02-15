@@ -1,0 +1,48 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/microservices/src",
+  "monorepo": true,
+  "root": "apps/microservices",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/microservices/tsconfig.app.json"
+  },
+  "projects": {
+    "microservices": {
+      "type": "application",
+      "root": "apps/microservices",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservices/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservices/tsconfig.app.json"
+      }
+    },
+    "microservice-a": {
+      "type": "application",
+      "root": "apps/microservice-a",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservice-a/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservice-a/tsconfig.app.json"
+      }
+    },
+    "microservice-b": {
+      "type": "application",
+      "root": "apps/microservice-b",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservice-b/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservice-b/tsconfig.app.json"
+      }
+    },
+    "microservice-c": {
+      "type": "application",
+      "root": "apps/microservice-c",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservice-c/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservice-c/tsconfig.app.json"
+      }
+    }
+  }
+}
