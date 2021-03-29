@@ -1,9 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
-import { MicroserviceBModule } from './microservice-b.module';
+import { MsCOrdersModule } from './ms-c-orders.module';
 
 async function bootstrap() {
-  const app = await NestFactory.createMicroservice<MicroserviceOptions>(MicroserviceBModule, {
+  const app = await NestFactory.createMicroservice<MicroserviceOptions>(MsCOrdersModule, {
     transport: Transport.RMQ,
     options: {
       urls: ['amqp://localhost:5672'],
@@ -12,7 +12,6 @@ async function bootstrap() {
         durable: false
       },
     },
-    logger: true
   });
   app.listen(() => console.log('Microservice is listening'));
 }

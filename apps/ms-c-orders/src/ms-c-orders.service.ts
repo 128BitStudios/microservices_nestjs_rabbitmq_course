@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class MicroserviceCService {
+export class MsCOrdersService {
   getHello(): string {
     return 'Hello World!';
   }

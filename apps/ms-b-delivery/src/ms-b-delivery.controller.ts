@@ -1,18 +1,18 @@
 import { Controller, Get, Logger } from '@nestjs/common';
 import { EventPattern, Payload, Ctx, RmqContext, MessagePattern } from '@nestjs/microservices';
-import { MicroserviceBService } from './microservice-b.service';
+import { MsBDeliveryService } from './ms-b-delivery.service';
 
 @Controller()
-export class MicroserviceBController {
+export class MsBDeliveryController {
   constructor(
-    private readonly microserviceBService: MicroserviceBService,
+    private readonly msBDeliveryService: MsBDeliveryService,
   ) {
     //
   }
 
   @Get()
   getHello(): string {
-    return this.microserviceBService.getHello();
+    return this.msBDeliveryService.getHello();
   }
 
   @EventPattern('ANIMALS_CREATED')
