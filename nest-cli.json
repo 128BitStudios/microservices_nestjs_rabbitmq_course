@@ -17,31 +17,31 @@
         "tsConfigPath": "apps/microservices/tsconfig.app.json"
       }
     },
-    "microservice-a": {
+    "ms-a-stock": {
       "type": "application",
-      "root": "apps/microservice-a",
+      "root": "apps/ms-a-stock",
       "entryFile": "main",
-      "sourceRoot": "apps/microservice-a/src",
+      "sourceRoot": "apps/ms-a-stock/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/microservice-a/tsconfig.app.json"
+        "tsConfigPath": "apps/ms-a-stock/tsconfig.app.json"
       }
     },
-    "microservice-b": {
+    "ms-b-delivery": {
       "type": "application",
-      "root": "apps/microservice-b",
+      "root": "apps/ms-b-delivery",
       "entryFile": "main",
-      "sourceRoot": "apps/microservice-b/src",
+      "sourceRoot": "apps/ms-b-delivery/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/microservice-b/tsconfig.app.json"
+        "tsConfigPath": "apps/ms-b-delivery/tsconfig.app.json"
       }
     },
-    "microservice-c": {
+    "ms-c-orders": {
       "type": "application",
-      "root": "apps/microservice-c",
+      "root": "apps/ms-c-orders",
       "entryFile": "main",
-      "sourceRoot": "apps/microservice-c/src",
+      "sourceRoot": "apps/ms-c-orders/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/microservice-c/tsconfig.app.json"
+        "tsConfigPath": "apps/ms-c-orders/tsconfig.app.json"
       }
     }
   }
