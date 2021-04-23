@@ -1,5 +1,6 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { v4 as uuid } from 'uuid';
 
 @Controller()
 export class AppController {
@@ -22,5 +23,10 @@ export class AppController {
   @Get('check-delivery')
   async checkDelivery() {
     await this.appService.checkDelivery('jaffa-cake-monster');
+  }
+
+  @Get('create-stock')
+  async createStock() {
+    await this.appService.createStock(uuid(), 5, 'Jaffa Cake');
   }
 }

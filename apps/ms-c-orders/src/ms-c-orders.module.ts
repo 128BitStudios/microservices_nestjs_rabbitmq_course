@@ -1,6 +1,7 @@
 import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
 import { Module } from '@nestjs/common';
 import { MsCOrdersController } from './ms-c-orders.controller';
+import { databaseProviders } from './ms-c-orders.database.provider';
 import { MsCOrdersService } from './ms-c-orders.service';
 
 @Module({
@@ -17,6 +18,9 @@ import { MsCOrdersService } from './ms-c-orders.service';
     MsCOrdersModule,
   ],
   controllers: [MsCOrdersController],
-  providers: [MsCOrdersService],
+  providers: [
+    MsCOrdersService,
+    ...databaseProviders,
+  ],
 })
 export class MsCOrdersModule { }
