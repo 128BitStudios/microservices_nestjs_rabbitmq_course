@@ -23,4 +23,9 @@ export class AppService {
     await this.amqpConnection.publish('delivery', 'delivery-route', { data: { customerName } });
     console.log('msg published', 'delivery', 'delivery-route', { data: { customerName } });
   }
+
+  async createStock(stockId, quantity, name) {
+    await this.amqpConnection.publish('stock', 'stock-route', { type: 'create_stock', data: { stockId, quantity, name } }, {});
+    console.log('msg published', 'stock', 'stock-route', { type: 'create_stock', data: { stockId, quantity, name } });
+  }
 }
